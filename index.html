@@ -71,14 +71,32 @@ header.site.small{background:rgba(245,239,227,.96)}
 .hero .bg{position:absolute;inset:0;background:var(--i5876) center/cover no-repeat;transform:scale(1.08);will-change:transform}
 .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,19,12,.55),rgba(34,72,62,.5) 55%,rgba(23,19,12,.78))}
 .hero .inner{position:relative;z-index:2;width:100%;padding:7rem 0}
-.hero .mark{width:92px;margin:0 auto 1.6rem;filter:drop-shadow(0 4px 18px rgba(0,0,0,.4));animation:spin 60s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero h1{max-width:15ch;margin:0 auto .7rem;text-shadow:0 2px 30px rgba(0,0,0,.4)}
-.hero .sub{max-width:44ch;margin:0 auto 2.3rem;font-size:1.15rem;color:#F1E9D8}
-.hero .cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+/* hero logo reveal — the mark draws itself on, golden light blooms, the words rise out of it */
+.hero .markwrap{position:relative;width:104px;height:104px;margin:0 auto 1.6rem;display:flex;align-items:center;justify-content:center}
+.hero .halo{position:absolute;left:50%;top:58%;width:300px;height:300px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;opacity:0;background:radial-gradient(circle,rgba(227,205,156,.28) 0%,rgba(201,166,96,.11) 34%,rgba(201,166,96,0) 66%);animation:haloBloom 1s ease-out 1.6s forwards,haloBreathe 6s ease-in-out 2.75s infinite}
+.hero .mark{position:relative;width:104px;height:104px;filter:drop-shadow(0 4px 18px rgba(0,0,0,.45))}
+.hm-circle,.hm-a1,.hm-a2,.hm-a3,.hm-line{stroke-dasharray:100.5;stroke-dashoffset:100.5;animation:drawOn .95s cubic-bezier(.65,0,.35,1) forwards}
+.hm-circle{animation-delay:.15s}
+.hm-a1{animation-delay:.55s;animation-duration:.75s}
+.hm-a2{animation-delay:.75s;animation-duration:.75s}
+.hm-a3{animation-delay:.95s;animation-duration:.75s}
+.hm-line{animation-delay:1.2s;animation-duration:.7s}
+.hm-dot{opacity:0;transform:scale(0);transform-box:view-box;transform-origin:100px 120px;animation:dotSeat .55s cubic-bezier(.16,1,.3,1) 1.55s forwards}
+.hm-dotglow{opacity:0;transform-box:view-box;transform-origin:100px 120px;filter:blur(4px);animation:dotGlow 1s ease-out 1.6s forwards,dotBreathe 6s ease-in-out 2.75s infinite}
+@keyframes drawOn{to{stroke-dashoffset:0}}
+@keyframes dotSeat{to{opacity:1;transform:scale(1)}}
+@keyframes haloBloom{0%{opacity:0}45%{opacity:.8}100%{opacity:.5}}
+@keyframes haloBreathe{0%,100%{opacity:.5}50%{opacity:.6}}
+@keyframes dotGlow{0%{opacity:0}45%{opacity:.32}100%{opacity:.2}}
+@keyframes dotBreathe{0%,100%{opacity:.2}50%{opacity:.26}}
+.hero h1{max-width:15ch;margin:0 auto .7rem;text-shadow:0 2px 30px rgba(0,0,0,.4);opacity:0;animation:heroRise 1s cubic-bezier(.16,1,.3,1) 1.5s forwards}
+.hero .sub{max-width:44ch;margin:0 auto 2.3rem;font-size:1.15rem;color:#F1E9D8;opacity:0;animation:heroRise 1s cubic-bezier(.16,1,.3,1) 1.75s forwards}
+.hero .cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:heroRise 1s cubic-bezier(.16,1,.3,1) 2s forwards}
+@keyframes heroRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .hero .btn-ghost{border-color:#E9DCBE;color:#F6EDD8}
 .hero .btn-ghost:hover{background:#F6EDD8;color:var(--ink)}
-.scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:#E9DCBE;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;animation:bob 2.4s ease-in-out infinite}
+.scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:#E9DCBE;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;opacity:0;animation:cueIn .8s ease-out 2.3s forwards,bob 2.4s ease-in-out 2.6s infinite}
+@keyframes cueIn{to{opacity:1}}
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
 section{padding:clamp(3.8rem,8vw,7rem) 0;position:relative}
@@ -87,12 +105,18 @@ section{padding:clamp(3.8rem,8vw,7rem) 0;position:relative}
 .lead{font-family:"Cormorant Garamond",serif;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.32;max-width:22ch;margin:0 auto;color:var(--ink)}
 .answer{max-width:60ch;margin:1.5rem auto 0;color:var(--ink-soft)}
 
-/* believe */
-.believe{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.bgrid{list-style:none;margin:2.6rem auto 0;padding:0;max-width:900px;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.bgrid li{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:1.4rem 1.5rem;font-size:1rem;transition:.25s}
-.bgrid li:hover{transform:translateY(-3px);box-shadow:0 16px 34px -22px rgba(140,108,52,.6);border-left-color:var(--terra)}
-.bgrid li b{color:var(--gold-deep);font-weight:600}
+/* believe — photo background, translucent cards */
+.believe{position:relative;color:#EFE7D6;isolation:isolate}
+.believe::before{content:"";position:absolute;inset:0;z-index:-2;background:url('https://images.squarespace-cdn.com/content/v1/59adc1c7c534a5dcf230be4a/b538748c-3bf2-491a-91b9-323771f4cbfa/7086A19B-98D8-4092-8DDA-008C327BAD55.jpeg?format=1800w') center/cover no-repeat}
+.believe::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(23,19,12,.8),rgba(34,72,62,.74) 60%,rgba(23,19,12,.82))}
+.believe .eyebrow{color:#E9DCBE}
+.believe h2{color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.bgrid{list-style:none;margin:3rem auto 0;padding:0;max-width:1080px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.bgrid li{background:rgba(23,19,12,.26);border:1px solid rgba(233,220,190,.28);border-radius:10px;padding:2.2rem 1.6rem;text-align:center;backdrop-filter:blur(3px);transition:.25s}
+.bgrid li:hover{transform:translateY(-4px);border-color:rgba(233,220,190,.55);background:rgba(23,19,12,.4)}
+.bgrid h3{font-family:"Cormorant Garamond",serif;font-size:1.55rem;letter-spacing:.02em;color:#F3E7C9;margin:0 0 .7rem;font-weight:500}
+.bgrid p{margin:0;font-size:.96rem;line-height:1.65;color:#E4DAC6}
+.bgrid b{color:#E3CD9C;font-weight:600}
 
 /* paths */
 .paths{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
@@ -114,9 +138,6 @@ section{padding:clamp(3.8rem,8vw,7rem) 0;position:relative}
 .gather .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
 .gather .ph:hover img{transform:scale(1.06)}
 .gather h2{color:#F3E7C9}
-.gather .info{list-style:none;margin:1.7rem 0 0;padding:0}
-.gather .info li{padding:.75rem 0;border-bottom:1px solid rgba(205,176,121,.22);display:flex;gap:1rem;font-size:.98rem}
-.gather .info span{color:var(--gold-light);min-width:92px;font-family:Inter;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding-top:.25rem}
 .gather .btn-ghost{border-color:var(--gold-light);color:var(--gold-light);margin-top:1.8rem}
 .gather .btn-ghost:hover{background:var(--gold-light);color:var(--emerald)}
 
@@ -169,7 +190,12 @@ footer .fine{border-top:1px solid rgba(205,176,121,.18);padding-top:1.6rem;font-
   .mobar{display:flex} body{padding-bottom:54px}
   .hero .bg{background-attachment:scroll}
 }
-@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto;transition:none!important}.reveal{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto;transition:none!important}.reveal{opacity:1;transform:none}
+  .hm-circle,.hm-a1,.hm-a2,.hm-a3,.hm-line{stroke-dashoffset:0}
+  .hm-dot{opacity:1;transform:scale(1)}
+  .hm-dotglow{opacity:.2}
+  .hero .halo{opacity:.5}
+  .hero h1,.hero .sub,.hero .cta,.scrollcue{opacity:1}}
 </style>
 </head>
 <body>
@@ -195,7 +221,26 @@ footer .fine{border-top:1px solid rgba(205,176,121,.18);padding-top:1.6rem;font-
   <section class="hero">
     <div class="bg" id="heroBg"></div>
     <div class="inner wrap">
-      <img class="mark" src="assets/logo/mark-mono-white.svg" alt="Temple of the Golden Light">
+      <div class="markwrap">
+        <div class="halo" aria-hidden="true"></div>
+        <svg class="mark" viewBox="0 0 200 200" role="img" aria-label="Temple of the Golden Light">
+          <defs>
+            <linearGradient id="heroLux" x1="0" y1="0" x2="0.9" y2="1">
+              <stop offset="0" stop-color="#E3CD9C"/><stop offset="0.5" stop-color="#C9A660"/><stop offset="1" stop-color="#9C7A3E"/>
+            </linearGradient>
+          </defs>
+          <circle class="hm-circle" cx="100" cy="100" r="62" fill="none" stroke="url(#heroLux)" stroke-width="1.6" pathLength="100" transform="rotate(-90 100 100)"/>
+          <g fill="none" stroke="url(#heroLux)" stroke-width="1.4" stroke-linecap="round">
+            <path class="hm-a1" d="M 52 128 A 48 48 0 0 1 148 128" pathLength="100"/>
+            <path class="hm-a2" d="M 65 128 A 35 35 0 0 1 135 128" pathLength="100"/>
+            <path class="hm-a3" d="M 78 128 A 22 22 0 0 1 122 128" pathLength="100"/>
+            <line class="hm-line" x1="88" y1="128" x2="46" y2="128" pathLength="100"/>
+            <line class="hm-line" x1="112" y1="128" x2="154" y2="128" pathLength="100"/>
+          </g>
+          <circle class="hm-dotglow" cx="100" cy="120" r="15" fill="#E3CD9C"/>
+          <circle class="hm-dot" cx="100" cy="120" r="8" fill="url(#heroLux)"/>
+        </svg>
+      </div>
       <h1>a free church for experiencing god within</h1>
       <p class="sub">a faith-based community near asheville, nc, channeling love, joy and care through sacred sound, cacao and gathering. everyone is welcome.</p>
       <div class="cta">
@@ -219,12 +264,12 @@ footer .fine{border-top:1px solid rgba(205,176,121,.18);padding-top:1.6rem;font-
       <p class="eyebrow">who we are</p>
       <h2 class="lower">what we believe</h2>
       <ul class="bgrid">
-        <li>in a god of <b>love and care</b> who inspires and brings life to everyone and everything.</li>
-        <li>that god is <b>all names</b>, spirit, the divine, life force energy, consciousness, creator.</li>
-        <li>in a god that moves through every one of us. there is <b>no separation</b>.</li>
-        <li>in a church that is <b>inclusive</b>, gathering around peace, love and care for everyone.</li>
-        <li>in the healing power of <b>sound and gathering</b>, of showing up authentically.</li>
-        <li>that we are loved, held, supported, and have everything we need. <b>always</b>.</li>
+        <li><h3 class="lower">love &amp; care</h3><p>a god of love and care who inspires and brings life to everyone and everything.</p></li>
+        <li><h3 class="lower">all names</h3><p>god is spirit, the divine, life force energy, consciousness, creator — all names, one source.</p></li>
+        <li><h3 class="lower">no separation</h3><p>a god that moves through every one of us. there is no separation between us and the divine.</p></li>
+        <li><h3 class="lower">inclusive</h3><p>a church that gathers around peace, love and care for everyone, from any faith or none.</p></li>
+        <li><h3 class="lower">sound &amp; gathering</h3><p>the healing power of sacred sound and gathering, of showing up authentically together.</p></li>
+        <li><h3 class="lower">always held</h3><p>we are loved, held, supported, and have everything we need. always.</p></li>
       </ul>
     </div>
   </section>
@@ -264,12 +309,6 @@ footer .fine{border-top:1px solid rgba(205,176,121,.18);padding-top:1.6rem;font-
           <p class="eyebrow" style="color:var(--gold-light)">every thursday</p>
           <h2 class="lower">come home to your soul family</h2>
           <p style="color:#D9CFB9;max-width:46ch">we share sacred cacao, a sound activation, devotional chanting and a short meditation, then eat together. bring a dish to share. no experience needed, just an open heart.</p>
-          <ul class="info">
-            <li><span>when</span> thursdays, 5:45 to 8:00pm ET</li>
-            <li><span>where</span> candler, nc (near asheville)</li>
-            <li><span>bring</span> a dish to share for the potluck</li>
-            <li><span>offering</span> donation-based, everyone welcome</li>
-          </ul>
           <a class="btn btn-ghost" href="mailto:brieandbjorn@gmail.com?subject=Joining%20Thursday%20gathering">Let us know you're coming</a>
         </div>
       </div>
