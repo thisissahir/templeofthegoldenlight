@@ -41,6 +41,10 @@ p{margin:0 0 1.1em} a{color:inherit} img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.2rem,4vw,2.4rem)}
 .eyebrow{font-family:Inter;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 1rem;font-weight:600}
 .lower{text-transform:lowercase}
+/* every heading and text line begins with a capital letter */
+.lower::first-letter{text-transform:uppercase}
+.hero h1::first-letter,.hero .sub::first-letter,.lead::first-letter,.answer::first-letter,
+.card p::first-letter,.bgrid p::first-letter,.gather p::first-letter,blockquote::first-letter{text-transform:uppercase}
 .btn{display:inline-flex;align-items:center;gap:.5em;font-family:Inter;font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:.95em 1.8em;border-radius:40px;transition:.25s;cursor:pointer}
 .btn-primary{background:linear-gradient(120deg,var(--gold-light),var(--gold-deep));color:#fff;box-shadow:0 10px 26px -12px rgba(140,108,52,.8)}
 .btn-primary:hover{filter:brightness(1.08);transform:translateY(-2px)}
