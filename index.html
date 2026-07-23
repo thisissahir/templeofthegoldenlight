@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temple of the Golden Light — a free church in Candler, NC</title>
+<meta name="description" content="A faith-based, non-denominational free church near Asheville, NC. Weekly gatherings with sacred cacao and sound, ceremonies, unCoaching, and the Villaging Life land project. Everyone is welcome.">
+<link rel="canonical" href="https://templeofthegoldenlight.com/">
+<link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+<meta property="og:title" content="Temple of the Golden Light">
+<meta property="og:description" content="A free church near Asheville, NC. Sacred sound, cacao, community. Everyone is welcome.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://templeofthegoldenlight.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.squarespace-cdn.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Church","@id":"https://templeofthegoldenlight.com/#org","name":"Temple of the Golden Light","url":"https://templeofthegoldenlight.com","logo":"https://templeofthegoldenlight.com/assets/logo/mark-gold.svg","email":"brieandbjorn@gmail.com","description":"A faith-based, non-denominational free church near Asheville, NC, devoted to deep healing through sacred sound, cacao ceremony and community gathering.","address":{"@type":"PostalAddress","streetAddress":"48 Long Cove Road","addressLocality":"Candler","addressRegion":"NC","postalCode":"28715","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Candler"},{"@type":"City","name":"Asheville"}],"founder":[{"@type":"Person","name":"Bjorn Leonards"},{"@type":"Person","name":"Brie Lamers"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Event","name":"Weekly Gathering — Cacao & Sacred Sound","eventSchedule":{"@type":"Schedule","byDay":"https://schema.org/Thursday","startTime":"17:45","endTime":"20:00","scheduleTimezone":"America/New_York","repeatFrequency":"P1W"},"eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","isAccessibleForFree":true,"location":{"@type":"Place","name":"Temple of the Golden Light","address":{"@type":"PostalAddress","streetAddress":"48 Long Cove Road","addressLocality":"Candler","addressRegion":"NC","postalCode":"28715","addressCountry":"US"}},"description":"Every Thursday 5:45-8:00pm ET: sacred cacao, sound activation, devotional chanting, meditation and a potluck. Bring a dish. All welcome.","organizer":{"@id":"https://templeofthegoldenlight.com/#org"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What happens at a gathering?","acceptedAnswer":{"@type":"Answer","text":"Weekly gatherings run every Thursday 5:45-8:00pm ET in Candler, NC. We share sacred cacao, a sound activation, devotional chanting and a short meditation, followed by a potluck. Bring a dish. All are welcome."}},{"@type":"Question","name":"Do I need to belong to a religion to attend?","acceptedAnswer":{"@type":"Answer","text":"No. We are inclusive and non-denominational. We hold that all gods are one god and that everyone is included."}},{"@type":"Question","name":"Is the cacao a drug? Is it safe?","acceptedAnswer":{"@type":"Answer","text":"Cacao is a gentle heart-opener, not a psychedelic. You stay fully present and take as much or as little as feels right."}}]}
+</script>
+<style>
+:root{
+  --ivory:#F5EFE3; --paper:#FBF8F1; --ink:#17130C; --ink-soft:#5A4F3C;
+  --gold:#B4924E; --gold-deep:#8C6C34; --gold-light:#CDB079;
+  --emerald:#22483E; --terra:#B5633C; --plum:#463049; --rose:#CE8C69;
+  --line:rgba(140,108,52,.22); --maxw:1140px;
+  --i5876:url('https://images.squarespace-cdn.com/content/v1/59adc1c7c534a5dcf230be4a/def8761a-a357-4a85-a249-aa9d1e4f5aca/IMG_5876.jpg?format=1800w');
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.12;margin:0;letter-spacing:.01em}
+h1{font-size:clamp(2.7rem,6.4vw,5rem)} h2{font-size:clamp(2rem,4.4vw,3.2rem)} h3{font-size:1.5rem}
+p{margin:0 0 1.1em} a{color:inherit} img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.2rem,4vw,2.4rem)}
+.eyebrow{font-family:Inter;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 1rem;font-weight:600}
+.lower{text-transform:lowercase}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:Inter;font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:.95em 1.8em;border-radius:40px;transition:.25s;cursor:pointer}
+.btn-primary{background:linear-gradient(120deg,var(--gold-light),var(--gold-deep));color:#fff;box-shadow:0 10px 26px -12px rgba(140,108,52,.8)}
+.btn-primary:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold-deep)}
+.btn-ghost:hover{background:var(--gold);color:#fff}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* header */
+header.site{position:sticky;top:0;z-index:60;background:rgba(245,239,227,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:.3s}
+header.site.small{background:rgba(245,239,227,.96)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand img{width:40px;height:40px;transition:transform .8s}
+.brand:hover img{transform:rotate(20deg)}
+.brand span{font-family:"Cormorant Garamond",serif;font-size:1.18rem;color:var(--ink)}
+.menu{display:flex;gap:1.9rem;list-style:none;margin:0;padding:0}
+.menu a{font-family:Inter;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink-soft);position:relative}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:.3s}
+.menu a:hover::after{width:100%}
+.nav .btn{padding:.7em 1.4em}
+.burger{display:none;background:none;border:0;cursor:pointer}
+
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;text-align:center;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:var(--i5876) center/cover no-repeat;transform:scale(1.08);will-change:transform}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,19,12,.55),rgba(34,72,62,.5) 55%,rgba(23,19,12,.78))}
+.hero .inner{position:relative;z-index:2;width:100%;padding:7rem 0}
+.hero .mark{width:92px;margin:0 auto 1.6rem;filter:drop-shadow(0 4px 18px rgba(0,0,0,.4));animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{max-width:15ch;margin:0 auto .7rem;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.hero .sub{max-width:44ch;margin:0 auto 2.3rem;font-size:1.15rem;color:#F1E9D8}
+.hero .cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+.hero .btn-ghost{border-color:#E9DCBE;color:#F6EDD8}
+.hero .btn-ghost:hover{background:#F6EDD8;color:var(--ink)}
+.scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:#E9DCBE;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+section{padding:clamp(3.8rem,8vw,7rem) 0;position:relative}
+.center{text-align:center}
+.rule{width:46px;height:2px;background:linear-gradient(90deg,var(--gold-light),var(--gold-deep));margin:0 auto 1.4rem;border-radius:2px}
+.lead{font-family:"Cormorant Garamond",serif;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.32;max-width:22ch;margin:0 auto;color:var(--ink)}
+.answer{max-width:60ch;margin:1.5rem auto 0;color:var(--ink-soft)}
+
+/* believe */
+.believe{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bgrid{list-style:none;margin:2.6rem auto 0;padding:0;max-width:900px;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.bgrid li{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:1.4rem 1.5rem;font-size:1rem;transition:.25s}
+.bgrid li:hover{transform:translateY(-3px);box-shadow:0 16px 34px -22px rgba(140,108,52,.6);border-left-color:var(--terra)}
+.bgrid li b{color:var(--gold-deep);font-weight:600}
+
+/* paths */
+.paths{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+.card{position:relative;border-radius:6px;overflow:hidden;color:#fff;min-height:380px;display:flex;flex-direction:column;justify-content:flex-end;padding:1.9rem;text-align:left;isolation:isolate}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s}
+.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(23,19,12,.15),rgba(23,19,12,.82))}
+.card:hover img{transform:scale(1.07)}
+.card .tag{font-family:Inter;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);margin-bottom:.5rem}
+.card h3{margin:0 0 .5rem} .card p{font-size:.96rem;color:#EFE7D6;margin-bottom:1rem}
+.card a{font-family:Inter;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-decoration:none;border-bottom:1px solid var(--gold-light);padding-bottom:2px;align-self:flex-start}
+.card.c1::after{background:linear-gradient(180deg,rgba(34,72,62,.2),rgba(34,72,62,.85))}
+.card.c2::after{background:linear-gradient(180deg,rgba(70,48,73,.2),rgba(70,48,73,.85))}
+.card.c3::after{background:linear-gradient(180deg,rgba(181,99,60,.2),rgba(140,60,30,.85))}
+
+/* gather */
+.gather{background:var(--emerald);color:#EFE7D6;overflow:hidden}
+.gather .grid{display:grid;grid-template-columns:1fr 1fr;gap:3.2rem;align-items:center}
+.gather .ph{border-radius:6px;overflow:hidden;aspect-ratio:4/3}
+.gather .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gather .ph:hover img{transform:scale(1.06)}
+.gather h2{color:#F3E7C9}
+.gather .info{list-style:none;margin:1.7rem 0 0;padding:0}
+.gather .info li{padding:.75rem 0;border-bottom:1px solid rgba(205,176,121,.22);display:flex;gap:1rem;font-size:.98rem}
+.gather .info span{color:var(--gold-light);min-width:92px;font-family:Inter;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding-top:.25rem}
+.gather .btn-ghost{border-color:var(--gold-light);color:var(--gold-light);margin-top:1.8rem}
+.gather .btn-ghost:hover{background:var(--gold-light);color:var(--emerald)}
+
+/* gallery marquee */
+.gallery{background:var(--ink);padding:0;overflow:hidden}
+.gallery .track{display:flex;gap:14px;width:max-content;animation:slide 40s linear infinite;padding:14px 0}
+.gallery:hover .track{animation-play-state:paused}
+.gallery img{height:230px;width:auto;border-radius:4px;filter:saturate(1.05)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* quote over image */
+.quote{position:relative;color:#fff;text-align:center;isolation:isolate}
+.quote img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.quote::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(120deg,rgba(70,48,73,.86),rgba(34,72,62,.82))}
+.quote blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.4;max-width:24ch;margin:0 auto}
+.quote cite{display:block;margin-top:1.4rem;font-family:Inter;font-style:normal;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light)}
+
+/* donate */
+.donate{text-align:center;background:linear-gradient(160deg,#FBF3E6,#F3E4D3)}
+.donate .box{max-width:660px;margin:0 auto;background:#fff;border:1px solid var(--line);border-top:4px solid var(--terra);padding:clamp(2.2rem,5vw,3.6rem);border-radius:6px;box-shadow:0 30px 60px -40px rgba(140,108,52,.6)}
+
+/* connect */
+.connect{background:var(--plum);color:#F0E7EE;text-align:center}
+.connect h2{color:#F3E9F0}
+.connect .answer{color:#D9CBD6}
+.connect .btn-ghost{border-color:var(--gold-light);color:var(--gold-light)}
+.connect .btn-ghost:hover{background:var(--gold-light);color:var(--plum)}
+
+/* footer */
+footer.site{background:var(--ink);color:#CFC4AE;padding:4.2rem 0 2.2rem}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.4rem;margin-bottom:2.8rem}
+footer img.fmark{width:130px;margin-bottom:1rem}
+footer h4{font-family:Inter;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin:0 0 1rem}
+footer a{color:#CFC4AE;text-decoration:none;display:block;padding:.28rem 0;font-size:.92rem;transition:.2s}
+footer a:hover{color:#fff;padding-left:4px}
+footer .fine{border-top:1px solid rgba(205,176,121,.18);padding-top:1.6rem;font-size:.8rem;color:#8A8069;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+
+/* mobile action */
+.mobar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:70;background:var(--ink);border-top:1px solid rgba(205,176,121,.3)}
+.mobar a{flex:1;text-align:center;padding:1rem;font-family:Inter;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:#EFE7D6}
+.mobar a.p{background:linear-gradient(120deg,var(--gold-light),var(--gold-deep));color:#fff}
+
+@media(max-width:860px){
+  .menu,.nav .btn{display:none}
+  .burger{display:block}
+  .menu.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--ivory);border-bottom:1px solid var(--line);padding:1rem 1.4rem;gap:.3rem}
+  .menu.open a{padding:.7rem 0}
+  .bgrid,.paths,.gather .grid{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+  .mobar{display:flex} body{padding-bottom:54px}
+  .hero .bg{background-attachment:scroll}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="site" id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="/"><img src="assets/logo/mark-gold.svg" alt=""><span>temple of the golden light</span></a>
+    <nav><ul class="menu" id="menu">
+      <li><a href="#believe">who we are</a></li>
+      <li><a href="#gather">gatherings</a></li>
+      <li><a href="#paths">uncoaching</a></li>
+      <li><a href="#paths">villaging</a></li>
+      <li><a href="#connect">connect</a></li>
+    </ul></nav>
+    <a class="btn btn-primary" href="#gather">Join a gathering</a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" id="bg">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#8C6C34" stroke-width="1.6"><path d="M4 8h18M4 13h18M4 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="bg" id="heroBg"></div>
+    <div class="inner wrap">
+      <img class="mark" src="assets/logo/mark-mono-white.svg" alt="Temple of the Golden Light">
+      <h1>a free church for experiencing god within</h1>
+      <p class="sub">a faith-based community near asheville, nc, channeling love, joy and care through sacred sound, cacao and gathering. everyone is welcome.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#gather">Join a gathering</a>
+        <a class="btn btn-ghost" href="#connect">Start a conversation</a>
+      </div>
+    </div>
+    <div class="scrollcue">scroll</div>
+  </section>
+
+  <section class="center">
+    <div class="wrap reveal">
+      <div class="rule"></div>
+      <p class="lead">we are all surrounded and held by love, joy and care.</p>
+      <p class="answer">temple of the golden light is a free, faith-based church in candler, north carolina. we gather every thursday around sacred cacao and sacred sound to experience god within, through chanting, meditation and community. we are inclusive and non-denominational. everyone is welcome, from any faith or none.</p>
+    </div>
+  </section>
+
+  <section class="believe" id="believe">
+    <div class="wrap center reveal">
+      <p class="eyebrow">who we are</p>
+      <h2 class="lower">what we believe</h2>
+      <ul class="bgrid">
+        <li>in a god of <b>love and care</b> who inspires and brings life to everyone and everything.</li>
+        <li>that god is <b>all names</b>, spirit, the divine, life force energy, consciousness, creator.</li>
+        <li>in a god that moves through every one of us. there is <b>no separation</b>.</li>
+        <li>in a church that is <b>inclusive</b>, gathering around peace, love and care for everyone.</li>
+        <li>in the healing power of <b>sound and gathering</b>, of showing up authentically.</li>
+        <li>that we are loved, held, supported, and have everything we need. <b>always</b>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="paths">
+    <div class="wrap center">
+      <p class="eyebrow reveal">ways in</p>
+      <h2 class="lower reveal">three ways to begin</h2>
+      <div class="paths">
+        <article class="card c1 reveal">
+          <img src="https://images.squarespace-cdn.com/content/v1/59adc1c7c534a5dcf230be4a/71aa8efb-0a4f-4a61-abd8-d76411208690/IMG_8309.jpg?format=1000w" alt="Community gathering in circle">
+          <span class="tag">every thursday</span><h3 class="lower">gather</h3>
+          <p>weekly cacao and sound in candler, plus ceremonies through the year. come as you are.</p>
+          <a href="#gather">See gatherings</a>
+        </article>
+        <article class="card c2 reveal">
+          <img src="https://images.squarespace-cdn.com/content/v1/59adc1c7c534a5dcf230be4a/1550791088558-1U3IUN439FTHJIGPNNN1/23318954_10155719639478213_2664833282134216263_n.jpg?format=1000w" alt="One to one unCoaching">
+          <span class="tag">one to one</span><h3 class="lower">uncoaching</h3>
+          <p>a journey beyond old stories into radical freedom. the first call is free.</p>
+          <a href="https://calendly.com/brieandbjorn/45min">Book a free call</a>
+        </article>
+        <article class="card c3 reveal">
+          <img src="https://images.squarespace-cdn.com/content/v1/59adc1c7c534a5dcf230be4a/def8761a-a357-4a85-a249-aa9d1e4f5aca/IMG_5876.jpg?format=1000w" alt="Land near Asheville">
+          <span class="tag">25 acres</span><h3 class="lower">villaging life</h3>
+          <p>a land and community project near asheville. an invitation to participate.</p>
+          <a href="#connect">Explore villaging</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gather" id="gather">
+    <div class="wrap">
+      <div class="grid">
+        <div class="ph reveal"><img src="https://images.squarespace-cdn.com/content/v1/59adc1c7c534a5dcf230be4a/b538748c-3bf2-491a-91b9-323771f4cbfa/7086A19B-98D8-4092-8DDA-008C327BAD55.jpeg?format=1200w" alt="Sacred sound and cacao ceremony"></div>
+        <div class="reveal">
+          <p class="eyebrow" style="color:var(--gold-light)">every thursday</p>
+          <h2 class="lower">come home to your soul family</h2>
+          <p style="color:#D9CFB9;max-width:46ch">we share sacred cacao, a sound activation, devotional chanting and a short meditation, then eat together. bring a dish to share. no experience needed, just an open heart.</p>
+          <ul class="info">
+            <li><span>when</span> thursdays, 5:45 to 8:00pm ET</li>
+            <li><span>where</span> candler, nc (near asheville)</li>
+            <li><span>bring</span> a dish to share for the potluck</li>
+            <li><span>offering</span> donation-based, everyone welcome</li>
+          </ul>
+          <a class="btn btn-ghost" href="mailto:brieandbjorn@gmail.com?subject=Joining%20Thursday%20gathering">Let us know you're coming</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" aria-label="Moments from the temple">
+    <div class="track" id="gtrack"></div>
+  </section>
+
+  <section class="quote">
+    <img src="https://images.squarespace-cdn.com/content/v1/59adc1c7c534a5dcf230be4a/71aa8efb-0a4f-4a61-abd8-d76411208690/IMG_8309.jpg?format=1600w" alt="">
+    <div class="wrap reveal">
+      <blockquote>"that ceremony was insane. the energetic work i felt it do on my body was magical and transformational."</blockquote>
+      <cite>Raya</cite>
+    </div>
+  </section>
+
+  <section class="donate">
+    <div class="wrap reveal">
+      <div class="box">
+        <p class="eyebrow" style="color:var(--terra)">in service</p>
+        <h2 class="lower">support the temple</h2>
+        <p class="answer" style="margin-top:.6rem">we are stepping away from cost-per-event toward simply being in service, and saving to buy land and build an actual temple. your tax-deductible gift makes it possible.</p>
+        <a class="btn btn-primary" href="#connect" style="margin-top:1.3rem">Make a donation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="connect" id="connect">
+    <div class="wrap reveal">
+      <div class="rule"></div>
+      <h2 class="lower">start a conversation</h2>
+      <p class="answer">whether you are curious about a gathering, unCoaching, villaging, or simply feel a resonance, we would love to hear from you. begin with what feels alive for you.</p>
+      <div class="cta" style="display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:1.8rem">
+        <a class="btn btn-primary" href="mailto:brieandbjorn@gmail.com">Email us</a>
+        <a class="btn btn-ghost" href="https://calendly.com/brieandbjorn/45min">Book a free call</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img class="fmark" src="assets/logo/mark-gold-on-dark.svg" alt="Temple of the Golden Light">
+        <p style="color:#8A8069;max-width:34ch;font-size:.9rem">a faith-based, non-denominational free church. we are all in this together.</p>
+      </div>
+      <div><h4>visit</h4>
+        <a href="#gather">Weekly gatherings</a><a href="#paths">unCoaching</a><a href="#paths">Villaging Life</a><a href="#connect">Connect</a>
+      </div>
+      <div><h4>contact</h4>
+        <a href="mailto:brieandbjorn@gmail.com">brieandbjorn@gmail.com</a><a>48 Long Cove Road</a><a>Candler, NC 28715</a>
+      </div>
+    </div>
+    <div class="fine"><span>© 2026 Temple of the Golden Light</span><span>Founded by Bjorn Leonards &amp; Brie Lamers</span></div>
+  </div>
+</footer>
+
+<nav class="mobar">
+  <a href="mailto:brieandbjorn@gmail.com">Message us</a>
+  <a class="p" href="#gather">Join a gathering</a>
+</nav>
+
+<script>
+// mobile menu
+var bgt=document.getElementById('bg'),mn=document.getElementById('menu');
+bgt.addEventListener('click',function(){mn.classList.toggle('open');this.setAttribute('aria-expanded',mn.classList.contains('open'))});
+mn.addEventListener('click',function(e){if(e.target.tagName==='A')mn.classList.remove('open')});
+// header shrink
+var hdr=document.getElementById('hdr');
+addEventListener('scroll',function(){hdr.classList.toggle('small',scrollY>40)},{passive:true});
+// hero parallax
+var hb=document.getElementById('heroBg');
+if(matchMedia('(prefers-reduced-motion: no-preference)').matches){
+  addEventListener('scroll',function(){hb.style.transform='scale(1.08) translateY('+(scrollY*.12)+'px)'},{passive:true});
+}
+// reveal on scroll
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+// gallery marquee (duplicated for seamless loop)
+var imgs=[
+ 'def8761a-a357-4a85-a249-aa9d1e4f5aca/IMG_5876.jpg',
+ '71aa8efb-0a4f-4a61-abd8-d76411208690/IMG_8309.jpg',
+ 'b538748c-3bf2-491a-91b9-323771f4cbfa/7086A19B-98D8-4092-8DDA-008C327BAD55.jpeg',
+ '1550791088558-1U3IUN439FTHJIGPNNN1/23318954_10155719639478213_2664833282134216263_n.jpg',
+ 'd05ce64b-d3db-4a87-8640-c7b4be75caa6/Text+placeholder-38.png'
+];
+var base='https://images.squarespace-cdn.com/content/v1/59adc1c7c534a5dcf230be4a/';
+var t=document.getElementById('gtrack'),html='';
+imgs.concat(imgs).forEach(function(p){html+='<img loading="lazy" src="'+base+p+'?format=800w" alt="Moment at the temple">'});
+t.innerHTML=html;
+</script>
+</body>
+</html>

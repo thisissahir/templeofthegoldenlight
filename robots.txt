@@ -1,0 +1,35 @@
+# robots.txt — Temple of the Golden Light (2026 policy)
+# Goal: maximum visibility in AI answers + normal search.
+
+User-agent: *
+Allow: /
+Disallow: /connect/thank-you
+
+# --- AI SEARCH & RETRIEVAL crawlers: ALLOW (these put you in AI answers) ---
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# --- AI TRAINING crawlers: ALLOW by default (visibility > IP concern for a church) ---
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Submit both in Google Search Console AND Bing Webmaster Tools (ChatGPT search runs on Bing)
+Sitemap: https://templeofthegoldenlight.com/sitemap.xml
